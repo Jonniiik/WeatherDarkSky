@@ -1,14 +1,11 @@
 package com.eugeneponomarev.weatherdarksky.Model;
 
-
-public class Currently {
+public class Datum2 {
     private int time;
     private String summary;
     private String icon;
-    private int nearestStormDistance;
-    private int nearestStormBearing;
-    private int precipIntensity;
-    private int precipProbability;
+    private double precipIntensity;
+    private double precipProbability;
     private double temperature;
     private double apparentTemperature;
     private double dewPoint;
@@ -21,6 +18,7 @@ public class Currently {
     private int uvIndex;
     private double visibility;
     private double ozone;
+    private String precipType;
 
     public int getTime() {
         return time;
@@ -46,35 +44,19 @@ public class Currently {
         this.icon = icon;
     }
 
-    public int getNearestStormDistance() {
-        return nearestStormDistance;
-    }
-
-    public void setNearestStormDistance(int nearestStormDistance) {
-        this.nearestStormDistance = nearestStormDistance;
-    }
-
-    public int getNearestStormBearing() {
-        return nearestStormBearing;
-    }
-
-    public void setNearestStormBearing(int nearestStormBearing) {
-        this.nearestStormBearing = nearestStormBearing;
-    }
-
-    public int getPrecipIntensity() {
+    public double getPrecipIntensity() {
         return precipIntensity;
     }
 
-    public void setPrecipIntensity(int precipIntensity) {
+    public void setPrecipIntensity(double precipIntensity) {
         this.precipIntensity = precipIntensity;
     }
 
-    public int getPrecipProbability() {
+    public double getPrecipProbability() {
         return precipProbability;
     }
 
-    public void setPrecipProbability(int precipProbability) {
+    public void setPrecipProbability(double precipProbability) {
         this.precipProbability = precipProbability;
     }
 
@@ -172,5 +154,13 @@ public class Currently {
 
     public void setOzone(double ozone) {
         this.ozone = ozone;
+    }
+
+    public String getPrecipType() {
+        return precipType;
+    }
+
+    public void setPrecipType(String precipType) {
+        this.precipType = precipType;
     }
 }

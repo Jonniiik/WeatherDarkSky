@@ -1,54 +1,51 @@
 package com.eugeneponomarev.weatherdarksky.Model;
 
-public class DailyDatum {
-    private double time;
+public class Datum3 {
+    private int time;
     private String summary;
-    private Icon icon;
-    private double sunriseTime;
-    private double sunsetTime;
+    private String icon;
+    private int sunriseTime;
+    private int sunsetTime;
     private double moonPhase;
     private double precipIntensity;
     private double precipIntensityMax;
-    private double precipIntensityMaxTime;
+    private int precipIntensityMaxTime;
     private double precipProbability;
-    private PrecipType precipType;
     private double temperatureHigh;
-    private double temperatureHighTime;
+    private int temperatureHighTime;
     private double temperatureLow;
-    private double temperatureLowTime;
+    private int temperatureLowTime;
     private double apparentTemperatureHigh;
-    private double apparentTemperatureHighTime;
+    private int apparentTemperatureHighTime;
     private double apparentTemperatureLow;
-    private double apparentTemperatureLowTime;
+    private int apparentTemperatureLowTime;
     private double dewPoint;
     private double humidity;
     private double pressure;
     private double windSpeed;
     private double windGust;
-    private double windGustTime;
-    private double windBearing;
+    private int windGustTime;
+    private int windBearing;
     private double cloudCover;
-    private double uvIndex;
-    private double uvIndexTime;
+    private int uvIndex;
+    private int uvIndexTime;
     private double visibility;
     private double ozone;
     private double temperatureMin;
-    private double temperatureMinTime;
+    private int temperatureMinTime;
     private double temperatureMax;
-    private double temperatureMaxTime;
+    private int temperatureMaxTime;
     private double apparentTemperatureMin;
-    private double apparentTemperatureMinTime;
+    private int apparentTemperatureMinTime;
     private double apparentTemperatureMax;
-    private double apparentTemperatureMaxTime;
+    private int apparentTemperatureMaxTime;
+    private String precipType;
 
-    public DailyDatum() {
-    }
-
-    public double getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(double time) {
+    public void setTime(int time) {
         this.time = time;
     }
 
@@ -60,27 +57,27 @@ public class DailyDatum {
         this.summary = summary;
     }
 
-    public Icon getIcon() {
+    public String getIcon() {
         return icon;
     }
 
-    public void setIcon(Icon icon) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
-    public double getSunriseTime() {
+    public int getSunriseTime() {
         return sunriseTime;
     }
 
-    public void setSunriseTime(double sunriseTime) {
+    public void setSunriseTime(int sunriseTime) {
         this.sunriseTime = sunriseTime;
     }
 
-    public double getSunsetTime() {
+    public int getSunsetTime() {
         return sunsetTime;
     }
 
-    public void setSunsetTime(double sunsetTime) {
+    public void setSunsetTime(int sunsetTime) {
         this.sunsetTime = sunsetTime;
     }
 
@@ -108,11 +105,11 @@ public class DailyDatum {
         this.precipIntensityMax = precipIntensityMax;
     }
 
-    public double getPrecipIntensityMaxTime() {
+    public int getPrecipIntensityMaxTime() {
         return precipIntensityMaxTime;
     }
 
-    public void setPrecipIntensityMaxTime(double precipIntensityMaxTime) {
+    public void setPrecipIntensityMaxTime(int precipIntensityMaxTime) {
         this.precipIntensityMaxTime = precipIntensityMaxTime;
     }
 
@@ -124,14 +121,6 @@ public class DailyDatum {
         this.precipProbability = precipProbability;
     }
 
-    public PrecipType getPrecipType() {
-        return precipType;
-    }
-
-    public void setPrecipType(PrecipType precipType) {
-        this.precipType = precipType;
-    }
-
     public double getTemperatureHigh() {
         return temperatureHigh;
     }
@@ -140,11 +129,11 @@ public class DailyDatum {
         this.temperatureHigh = temperatureHigh;
     }
 
-    public double getTemperatureHighTime() {
+    public int getTemperatureHighTime() {
         return temperatureHighTime;
     }
 
-    public void setTemperatureHighTime(double temperatureHighTime) {
+    public void setTemperatureHighTime(int temperatureHighTime) {
         this.temperatureHighTime = temperatureHighTime;
     }
 
@@ -156,11 +145,11 @@ public class DailyDatum {
         this.temperatureLow = temperatureLow;
     }
 
-    public double getTemperatureLowTime() {
+    public int getTemperatureLowTime() {
         return temperatureLowTime;
     }
 
-    public void setTemperatureLowTime(double temperatureLowTime) {
+    public void setTemperatureLowTime(int temperatureLowTime) {
         this.temperatureLowTime = temperatureLowTime;
     }
 
@@ -172,11 +161,11 @@ public class DailyDatum {
         this.apparentTemperatureHigh = apparentTemperatureHigh;
     }
 
-    public double getApparentTemperatureHighTime() {
+    public int getApparentTemperatureHighTime() {
         return apparentTemperatureHighTime;
     }
 
-    public void setApparentTemperatureHighTime(double apparentTemperatureHighTime) {
+    public void setApparentTemperatureHighTime(int apparentTemperatureHighTime) {
         this.apparentTemperatureHighTime = apparentTemperatureHighTime;
     }
 
@@ -188,11 +177,11 @@ public class DailyDatum {
         this.apparentTemperatureLow = apparentTemperatureLow;
     }
 
-    public double getApparentTemperatureLowTime() {
+    public int getApparentTemperatureLowTime() {
         return apparentTemperatureLowTime;
     }
 
-    public void setApparentTemperatureLowTime(double apparentTemperatureLowTime) {
+    public void setApparentTemperatureLowTime(int apparentTemperatureLowTime) {
         this.apparentTemperatureLowTime = apparentTemperatureLowTime;
     }
 
@@ -236,19 +225,19 @@ public class DailyDatum {
         this.windGust = windGust;
     }
 
-    public double getWindGustTime() {
+    public int getWindGustTime() {
         return windGustTime;
     }
 
-    public void setWindGustTime(double windGustTime) {
+    public void setWindGustTime(int windGustTime) {
         this.windGustTime = windGustTime;
     }
 
-    public double getWindBearing() {
+    public int getWindBearing() {
         return windBearing;
     }
 
-    public void setWindBearing(double windBearing) {
+    public void setWindBearing(int windBearing) {
         this.windBearing = windBearing;
     }
 
@@ -260,19 +249,19 @@ public class DailyDatum {
         this.cloudCover = cloudCover;
     }
 
-    public double getUvIndex() {
+    public int getUvIndex() {
         return uvIndex;
     }
 
-    public void setUvIndex(double uvIndex) {
+    public void setUvIndex(int uvIndex) {
         this.uvIndex = uvIndex;
     }
 
-    public double getUvIndexTime() {
+    public int getUvIndexTime() {
         return uvIndexTime;
     }
 
-    public void setUvIndexTime(double uvIndexTime) {
+    public void setUvIndexTime(int uvIndexTime) {
         this.uvIndexTime = uvIndexTime;
     }
 
@@ -300,11 +289,11 @@ public class DailyDatum {
         this.temperatureMin = temperatureMin;
     }
 
-    public double getTemperatureMinTime() {
+    public int getTemperatureMinTime() {
         return temperatureMinTime;
     }
 
-    public void setTemperatureMinTime(double temperatureMinTime) {
+    public void setTemperatureMinTime(int temperatureMinTime) {
         this.temperatureMinTime = temperatureMinTime;
     }
 
@@ -316,11 +305,11 @@ public class DailyDatum {
         this.temperatureMax = temperatureMax;
     }
 
-    public double getTemperatureMaxTime() {
+    public int getTemperatureMaxTime() {
         return temperatureMaxTime;
     }
 
-    public void setTemperatureMaxTime(double temperatureMaxTime) {
+    public void setTemperatureMaxTime(int temperatureMaxTime) {
         this.temperatureMaxTime = temperatureMaxTime;
     }
 
@@ -332,11 +321,11 @@ public class DailyDatum {
         this.apparentTemperatureMin = apparentTemperatureMin;
     }
 
-    public double getApparentTemperatureMinTime() {
+    public int getApparentTemperatureMinTime() {
         return apparentTemperatureMinTime;
     }
 
-    public void setApparentTemperatureMinTime(double apparentTemperatureMinTime) {
+    public void setApparentTemperatureMinTime(int apparentTemperatureMinTime) {
         this.apparentTemperatureMinTime = apparentTemperatureMinTime;
     }
 
@@ -348,11 +337,19 @@ public class DailyDatum {
         this.apparentTemperatureMax = apparentTemperatureMax;
     }
 
-    public double getApparentTemperatureMaxTime() {
+    public int getApparentTemperatureMaxTime() {
         return apparentTemperatureMaxTime;
     }
 
-    public void setApparentTemperatureMaxTime(double apparentTemperatureMaxTime) {
+    public void setApparentTemperatureMaxTime(int apparentTemperatureMaxTime) {
         this.apparentTemperatureMaxTime = apparentTemperatureMaxTime;
+    }
+
+    public String getPrecipType() {
+        return precipType;
+    }
+
+    public void setPrecipType(String precipType) {
+        this.precipType = precipType;
     }
 }

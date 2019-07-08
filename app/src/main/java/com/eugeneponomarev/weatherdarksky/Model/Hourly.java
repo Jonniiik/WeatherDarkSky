@@ -1,12 +1,11 @@
 package com.eugeneponomarev.weatherdarksky.Model;
 
+import java.util.List;
+
 public class Hourly {
     private String summary;
-    private Icon icon;
-    private Currently[] data;
-
-    public Hourly() {
-    }
+    private String icon;
+    private List<Datum2> data;
 
     public String getSummary() {
         return summary;
@@ -16,19 +15,19 @@ public class Hourly {
         this.summary = summary;
     }
 
-    public Icon getIcon() {
+    public String getIcon() {
         return icon;
     }
 
-    public void setIcon(Icon icon) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
-    public Currently[] getData() {
+    public List<Datum2> getData() {
         return data;
     }
 
-    public void setData(Currently[] data) {
+    public void setData(List<Datum2> data) {
         this.data = data;
     }
 }
