@@ -20,6 +20,7 @@ import com.eugeneponomarev.weatherdarksky.retrofitApi.RetrofitClient;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,6 +36,7 @@ public class WeatherFragment extends Fragment {
     public void onResume() {
         super.onResume();
         //getColorFragment();
+        getColorClearday();
     }
 
     static WeatherFragment instance;
@@ -148,7 +150,7 @@ public class WeatherFragment extends Fragment {
                 });
     }
 
-    private void getColorFragment() {
+    private void getColorClearday() {
         String dataTimeConvert;
         DateFormat dateFormat = new SimpleDateFormat("HH.mm");
         Calendar calendar = Calendar.getInstance();
@@ -157,27 +159,64 @@ public class WeatherFragment extends Fragment {
         try {
             dataTimeColor = Double.valueOf(dataTimeConvert);
         } catch (NumberFormatException e) {
-            nameTime.setText(String.valueOf(e.getMessage()));
+            textViewWeather.setText(String.valueOf(e.getMessage()));
         }
 
-        if (dataTimeColor == 00.00) {
-            linearLayoutFragment.setBackgroundColor(Color.WHITE);
+        if (dataTimeColor > 03.00 && dataTimeColor < 07.00) {
+            Objects.requireNonNull(getActivity()).getWindow().setBackgroundDrawableResource(R.drawable.dawn);
         }
-        if (dataTimeColor > 00.00 && dataTimeColor < 05.00) {
-            linearLayoutFragment.setBackgroundColor(Color.BLUE);
+        if (dataTimeColor > 07.00 && dataTimeColor < 11.00) {
+            getActivity().getWindow().setBackgroundDrawableResource(R.drawable.morning);
         }
-        if (dataTimeColor > 05.00 && dataTimeColor < 12.00) {
-            linearLayoutFragment.setBackgroundColor(Color.YELLOW);
-        }
-        if (dataTimeColor > 12.00 && dataTimeColor < 17.00) {
-            linearLayoutFragment.setBackgroundColor(Color.DKGRAY);
+        if (dataTimeColor > 11.00 && dataTimeColor < 17.00) {
+            getActivity().getWindow().setBackgroundDrawableResource(R.drawable.noon);
         }
         if (dataTimeColor > 17.00 && dataTimeColor < 21.00) {
-            linearLayoutFragment.setBackgroundColor(Color.RED);
+            getActivity().getWindow().setBackgroundDrawableResource(R.drawable.sunset);
         }
-        if (dataTimeColor > 21.00) {
-            linearLayoutFragment.setBackgroundColor(Color.BLACK);
+        if (dataTimeColor > 21.00 && dataTimeColor < 03.00) {
+            getActivity().getWindow().setBackgroundDrawableResource(R.drawable.night);
         }
+//        if (dataTimeColor > 05.00 && dataTimeColor < 06.00) {
+//        }
+//        if (dataTimeColor > 06.00 && dataTimeColor < 07.00) {
+//        }
+//        if (dataTimeColor > 07.00 && dataTimeColor < 08.00) {
+//        }
+//        if (dataTimeColor > 08.00 && dataTimeColor < 09.00) {
+//        }
+//        if (dataTimeColor > 09.00 && dataTimeColor < 10.00) {
+//        }
+//        if (dataTimeColor > 10.00 && dataTimeColor < 11.00) {
+//        }
+//        if (dataTimeColor > 11.00 && dataTimeColor < 12.00) {
+//        }
+//        if (dataTimeColor > 12.00 && dataTimeColor < 13.00) {
+//        }
+//        if (dataTimeColor > 13.00 && dataTimeColor < 14.00) {
+//        }
+//        if (dataTimeColor > 14.00 && dataTimeColor < 15.00) {
+//        }
+//        if (dataTimeColor > 15.00 && dataTimeColor < 16.00) {
+//        }
+//        if (dataTimeColor > 16.00 && dataTimeColor < 17.00) {
+//        }
+//        if (dataTimeColor > 17.00 && dataTimeColor < 18.00) {
+//        }
+//        if (dataTimeColor > 18.00 && dataTimeColor < 19.00) {
+//        }
+//        if (dataTimeColor > 19.00 && dataTimeColor < 20.00) {
+//        }
+//        if (dataTimeColor > 20.00 && dataTimeColor < 21.00) {
+//        }
+//        if (dataTimeColor > 21.00 && dataTimeColor < 22.00) {
+//        }
+//        if (dataTimeColor > 22.00 && dataTimeColor < 23.00) {
+//        }
+//        if (dataTimeColor > 23.00 && dataTimeColor < 24.00) {
+//        }
+//        if (dataTimeColor > 24.00) {
+//        }
 
     }
 }
